@@ -43,4 +43,4 @@ SCRAPY_VERSION = os.environ.get('SCRAPY_VERSION', '')
 if re.search('^\d+\.\d+\.\d+$', SCRAPY_VERSION):
     os.system('pip install scrapy==%s' % SCRAPY_VERSION)
 else:
-    os.system('pip install scrapy')
+    os.system('pip install scrapy>=1.6.0')
