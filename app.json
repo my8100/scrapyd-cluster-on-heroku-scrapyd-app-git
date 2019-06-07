@@ -1,0 +1,69 @@
+{
+    "name": "Scrapyd app (via git, unstable)",
+    "description": "How to set up Scrapyd cluster on Heroku",
+    "repository": "https://github.com/my8100/scrapyd-cluster-on-heroku",
+    "logo": "https://raw.githubusercontent.com/my8100/files/master/scrapydweb/icons/fav.png",
+    "keywords": ["scrapyd", "cluster", "heroku", "scrapy", "scrapyweb", "python", "web-crawling", "web-scraping"],
+    "env": {
+        "TZ": {
+            "description": "Timezone of the app, get it via: python -c \"import tzlocal; print(tzlocal.get_localzone())\"",
+            "value": "UTC",
+            "required": false
+        },
+        "REDIS_HOST": {
+            "description": "Optional, see settings.py in the scrapy_redis_demo_project.zip",
+            "value": "localhost",
+            "required": false
+        },
+        "REDIS_PORT": {
+            "description": "Optional, see settings.py in the scrapy_redis_demo_project.zip",
+            "value": "6379",
+            "required": false
+        },
+        "REDIS_PASSWORD": {
+            "description": "Optional, see settings.py in the scrapy_redis_demo_project.zip",
+            "value": "password",
+            "required": false
+        },
+        "PARSE_ROUND_INTERVAL": {
+            "description": "LogParser would sleep N seconds before starting next round of parsing, the default is 10.",
+            "value": "10",
+            "required": false
+        },
+        "ENABLE_TELNET": {
+            "description": "Whether to let LogParser collect Crawler.stats and Crawler.engine via telnet, the default is True.",
+            "value": "True",
+            "required": false
+        },
+        "ENABLE_AUTH": {
+            "description": "Whether to enable basic auth for Scrapyd, defaults to True. In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.",
+            "value": "True",
+            "required": true
+        },
+        "USERNAME": {
+            "description": "In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.",
+            "value": "admin",
+            "required": true
+        },
+        "PASSWORD": {
+            "description": "In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.",
+            "value": "admin",
+            "required": true
+        },
+        "NODE_NAME": {
+            "description": "The node name for each node to something like the display hostname. Defaults to socket.gethostname().",
+            "value": "unset",
+            "required": false
+        },
+        "SCRAPY_VERSION": {
+            "description": "Optional, defaults to the latest version; To specify the version of Scrapy, e.g. 1.5.1 or 1.6.0",
+            "value": "latest",
+            "required": false
+        },
+        "VERBOSE": {
+            "description": "The default is False, set it to True to change the logging level of LogParser from WARNING to DEBUG.",
+            "value": "False",
+            "required": false
+        }
+    }
+}

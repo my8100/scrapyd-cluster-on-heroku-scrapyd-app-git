@@ -1,0 +1,6 @@
+pip>=19.0.3
+Twisted>=18.9.0
+git+git://github.com/scrapy/scrapyd.git
+#scrapy>=1.6.0
+scrapy-redis
+logparser==0.8.1
