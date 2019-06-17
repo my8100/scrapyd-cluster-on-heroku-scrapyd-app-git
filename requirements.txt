@@ -3,4 +3,5 @@ Twisted>=18.9.0
 git+git://github.com/scrapy/scrapyd.git
 #scrapy>=1.6.0
 scrapy-redis
-logparser==0.8.1
+#logparser==0.8.1
+git+git://github.com/my8100/logparser.git
